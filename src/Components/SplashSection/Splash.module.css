@@ -1,0 +1,144 @@
+.homeBg_img {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-image: url('/public/images/Bold_Sale_Brand_Website_Homepage_Banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: floatingAnimation 5s ease-in-out infinite;
+}
+
+.homewall {
+    min-height: 500px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.description {
+    height: auto;
+    background-color: rgba(255, 255, 255); /* Semi-transparent white background */
+    position: absolute;
+    text-align: left; /* Align text to the left */
+    white-space: normal; /* Allow wrapping */
+    padding: 60px; /* Double the padding */
+    font-size: 16px;
+    max-width: 80%;
+    border-radius: 3px;
+    width: 60rem;
+}
+
+.home_title {
+    font-size: var(--big-font-size); /* Adjust as needed */
+    font-family: var(--second-font),serif;
+    margin-bottom: 1rem;
+    color: #800000; /* Dark red color */
+    text-align: left; /* Align text to the left */
+}
+
+
+.content p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #333; /* Darker color for text */
+    text-align: left; /* Align text to the left */
+}
+
+.homewall span {
+    font-size: 18px;
+    font-weight: 520;
+    line-height: 1.1;
+    color: rgb(42, 42, 42);
+}
+
+@media screen and (max-width: 300px) {
+    .homeBg_img {
+        width: 130%;
+        height: 130%;
+        background-size: 300%;
+    }
+    .homewall {
+        height: 15rem;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    .homeBg_img {
+        width: 130%;
+        height: 130%;
+        background-position: center 1rem;
+        background-size: 215%;
+        margin-left: -0.7rem;
+    }
+    .homewall {
+        height: 25rem;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .homeBg_img {
+        width: 120%;
+        height: 120%;
+        background-size: 160%;
+    }
+    .homewall {
+        height: 60vh;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .home_title h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .homeBg_img {
+        width: 120%;
+        height: 120%;
+        background-size: 195%;
+    }
+    .homewall {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .homeBg_img {
+        width: 120%;
+        height: 120%;
+        background-size: 150%;
+    }
+    .homewall {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 1150px) and (max-width: 1600px) {
+    .homeBg_img {
+        width: 120%;
+        height: 120%;
+        background-size: 130%;
+    }
+    .homewall {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+@keyframes floatingAnimation {
+    0% { transform: translate(0px, 0); }
+    25% { transform: translate(7px, 5px); }
+    50% { transform: translate(0, 12px); }
+    75% { transform: translate(-5px, 7px); }
+    100% { transform: translate(0px, 0); }
+}

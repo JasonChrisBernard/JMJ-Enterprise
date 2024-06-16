@@ -1,0 +1,12 @@
+.homeSections {
+    margin: 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  @media  screen and (max-width: 1150px) {
+      .homeSections {
+          margin-top: 50px;
+      }
+  }

@@ -1,0 +1,114 @@
+.section_title {
+  font-family: var(--second-font);
+  text-align: center;
+  font-size: 40px;
+}
+
+.shop_content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3rem;
+  margin-top: 2rem;
+  padding-left: 2rem; /* Adjust left padding to move content to the left */
+  grid-auto-rows: max-content; /* Ensure all rows are of equal height */
+}
+
+.product_box {
+  border: 1px solid var(--title-color);
+  position: relative;
+  border-radius: 10px;
+  transition: transform .3s;
+  cursor: pointer;
+  margin-bottom: 2rem; /* Adjust the gap between products */
+  display: flex;
+  flex-direction: column;
+}
+
+.product_box_img {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product_img {
+  margin-bottom: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transition: transform .3s;
+}
+
+.product_box:hover .product_img {
+  transform: scale(1.05);
+}
+
+.product_box_title {
+  padding: 1rem;
+  background-color: var(--title-color);
+  font-size: 1rem; /* Adjusted font size */
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center; /* Center align the text */
+  word-wrap: break-word; /* Ensure the text wraps to the next line if it's too long */
+  height: 90px;
+}
+
+.product_box_title h2.product_title {
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+  line-height: 1.19;
+  font-size: 1rem; /* Adjusted font size */
+}
+
+/* Media queries for different viewport sizes */
+@media (max-width: 576px) {
+  .shop_content {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 1rem;
+  }
+
+  .product_box_title h2.product_title {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .shop_content {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem;
+  }
+
+  .product_box_title h2.product_title {
+    font-size: 0.9rem; /* Adjust font size for medium screens */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1150px) {
+  .shop_content {
+    grid-template-columns: repeat(3, minmax(calc(33.33% - 1rem), 1fr)); /* Adjusted to have 3 columns */
+    padding: 0 6rem;
+  }
+
+  .product_box_title h2.product_title {
+    font-size: 1rem; /* Adjust font size for larger screens */
+  }
+}
+
+@media (min-width: 1150px) {
+  .shop_content {
+    grid-template-columns: repeat(4, minmax(calc(25% - 1rem), 1fr)); /* Adjusted to have 4 columns */
+    padding: 0 10rem 0 5rem;
+  }
+
+  .product_box_title h2.product_title {
+    font-size: 1.1rem; /* Adjust font size for largest screens */
+  }
+}
